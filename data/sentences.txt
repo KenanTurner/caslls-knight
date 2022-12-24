@@ -1,0 +1,24 @@
+# comments start with a pound sign
+# This list of words is used to help identify possible copulae
+# Adding or removing words WILL NOT affect program behavior
+Dad runs.
+The boy hits hard.
+The boy drew a picture.
+He seems tired.
+The bear is fat.
+I'm happy.
+You're silly.
+This is yours.
+The caterpillar changed into a butterfly.
+He's a doctor.
+It tasted like a marshmallow.
+The cloud looked like a dragon.
+He turned seven.
+He became president on January 21st.
+The ball is under the table.
+She's behind the door.
+The cake is for your birthday.
+The soccer game is at 2:00 p.m.
+The party is later.
+# The meeting is tomorrow.
+# The cake is for you.

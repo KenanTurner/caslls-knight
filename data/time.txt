@@ -1,0 +1,20 @@
+# comments start with a pound sign
+# This list of words is used to help identify possible time related words
+# Adding or removing words will affect program behavior
+now
+then
+later
+earlier
+soon
+p.m.
+a.m.
+today
+tomorrow
+yesterday
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday

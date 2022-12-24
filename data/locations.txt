@@ -1,0 +1,33 @@
+# comments start with a pound sign
+# This list of words is used to help identify possible location adverbs
+# Adding or removing words will affect program behavior
+about
+above
+abroad
+across
+away
+behind
+below
+between
+down
+downstairs
+east
+far
+here
+in
+indoors
+inside
+near
+nearby
+north
+off
+on
+out
+outside
+over
+south
+there
+under
+up
+upstairs
+west
