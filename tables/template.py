@@ -1,5 +1,4 @@
-from bsp import *
-from castle import nlp
+from tables.bsp import *
 
 # Things required for a class
 #  Title

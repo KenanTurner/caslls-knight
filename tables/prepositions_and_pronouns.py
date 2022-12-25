@@ -1,4 +1,4 @@
-from bsp import *
+from tables.bsp import *
 
 # Things required for a class
 #  Title

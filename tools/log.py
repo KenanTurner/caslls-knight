@@ -8,4 +8,4 @@ def setup_logger(name, file, level=logging.INFO, format='%(message)s'):
     logger.setLevel(level)
     logger.addHandler(handler)
     return logger
-logger = setup_logger("default", "castle.log", logging.DEBUG, '%(asctime)s %(levelname)s %(name)s %(message)s')
+logger = setup_logger("default", "debug.log", logging.DEBUG, '%(asctime)s %(levelname)s %(name)s %(message)s')

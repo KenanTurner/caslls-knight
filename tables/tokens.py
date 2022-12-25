@@ -6,7 +6,7 @@
 #    [cols]
 #    [?tests]
 
-title = "Tokenization (How the computer understands the sentence):"
+title = "Tokenization (see help mode for term definitions):"
 def tables(doc):
     return [table(doc)]
 def table(doc):

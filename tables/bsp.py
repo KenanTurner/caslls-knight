@@ -1,4 +1,4 @@
-from func_re import *
+from tools.func_re import *
 
 # helper sets
 COPULAE = set(filter(None,(line.strip() for line in open('data/copulae.txt') if not line.startswith("#"))))

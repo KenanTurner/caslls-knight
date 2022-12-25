@@ -1,5 +1,5 @@
-from bsp import *
-from nlp import nlp
+from tables.bsp import *
+from tools.nlp import nlp
 
 # Things required for a class
 #  Title
