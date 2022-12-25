@@ -1,4 +1,5 @@
 # Capture all stdout to disk
+import os
 import sys
 import re
 from io import TextIOBase
@@ -24,10 +25,10 @@ class Tee(TextIOBase):
 # Spacy and nlp imports
 import spacy
 from spacy.glossary import GLOSSARY
-from nlp import nlp
+from tools.nlp import nlp
 
 # logging
-from log import logger
+from tools.log import logger
 import atexit
 
 # Formatting imports
@@ -44,18 +45,14 @@ def printTables(doc, ref):
     print()
 
 # table imports
-import tokens
-import bsp
-import nouns_and_noun_modifiers
-import prepositions_and_pronouns
-import verbs_and_modals
-import tense_and_negation
-import emerging_complexity
-import questions
-
-# TODO Remove
-SENTENCES = list(filter(None,(line.strip() for line in open('data/sentences.txt') if not line.startswith("#"))))
-sentences = SENTENCES
+from tables import tokens
+from tables import bsp
+from tables import nouns_and_noun_modifiers
+from tables import prepositions_and_pronouns
+from tables import verbs_and_modals
+from tables import tense_and_negation
+from tables import emerging_complexity
+from tables import questions
 
 if __name__ == "__main__":
     try:
@@ -65,13 +62,18 @@ if __name__ == "__main__":
         sys.stdin = Tee(sys.stdin, log)
         
         # Setup logger
-        def onExit(logger):
+        def onExit():
             logger.info("#################### __main__ halted ####################")
-        atexit.register(lambda : onExit(logger))
+        atexit.register(onExit)
         logger.info("#################### __main__ started ####################")
         
         # colorama
         just_fix_windows_console()
+        
+        # logo
+        with open('data/logo.txt', 'r') as f:
+            print(f.read(),end="")
+        print(colored(f"This session can be viewed at: {os.path.realpath(log.name)}","YELLOW",style="BRIGHT"))
         
         # Help mode (duh)
         help_mode = False
@@ -95,9 +97,10 @@ if __name__ == "__main__":
                         print(colored("Perhaps you forgot to capitalize?","RED",style="BRIGHT"))
             else:
                 sentence = input(colored("Please enter a sentence (or type 'help' to enter help mode) (or type ctrl-c to exit):\n","MAGENTA",style="BRIGHT")).strip()
-                # sentence = sentences.pop(0)
                 logger.debug(f"Input: '{sentence}'")
                 
+                if sentence.lower() == "exit":
+                    raise KeyboardInterrupt
                 if sentence.lower() == "help":
                     print(colored("Now entering help mode...","YELLOW",style="BRIGHT"))
                     print(colored("The full glossary of terms can be found at the following sites:","CYAN",style="BRIGHT"))
@@ -123,4 +126,4 @@ if __name__ == "__main__":
     except Exception as err:
         print("Uncaught Exception! Exiting...")
         logger.error(f"Uncaught Exception!", exc_info=1)
-        print("See castle.log for more info")
+        print("See debug.log for more info")
