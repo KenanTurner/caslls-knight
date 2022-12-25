@@ -62,3 +62,5 @@ pyinstaller ./knight.spec --clean
 ```
 
 ## License
+
+[Mozilla Public License Version 2.0](/LICENSE.txt)
