@@ -33,21 +33,21 @@ Kenan's Novel Intelligent en(G)lish Helper Tool for Cottage Acquisition Scales f
 1. Download the latest zip file from the [releases tab](https://github.com/KenanTurner/caslls-knight/releases)
 2. Unzip the file to a safe location
 3. Navigate to the unzipped folder
-4. Double click *Knight.exe* to launch the program
-5. Windows will warn you against running the program. Click *More info* and then *Run anyway*
+4. Double click **Knight.exe** to launch the program
+5. Windows will warn you against running the program. Click **More info** and then **Run anyway**
 6. To exit, type ctrl-c
 
 ## Tips
 
 - *TODO* indicates the developer has not yet implemented the feature (likely because the developer doesn't understand CASLLS very well)
-- Help mode can be activated by typing *help*
-- Right click on *knight.exe* and click *Send to > Desktop* to create a shortcut
-- All sessions are stored as *history-YYYY-MM-DD.txt* inside the *knight* folder
+- Help mode can be activated by typing **help**
+- Right click on **knight.exe** and click **Send to > Desktop** to create a shortcut
+- All sessions are stored as **history-YYYY-MM-DD.txt** inside the **knight** folder
 
 ## Bugs and issues
 
-If you have any issues or would like to report a bug, notify the developer over email and text
-For email, please put *[BUG/ISSUE]* in the subject line and include a zip of all *history-YYYY-MM-DD.txt* and *debug.log*
+If you have any issues or would like to report a bug, notify the developer over email and text.
+For email, please put **[BUG/ISSUE]** in the subject line and include a zip of all **history-YYYY-MM-DD.txt** and **debug.log**.
 
 ## Developers
 
